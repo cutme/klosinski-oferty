@@ -1,0 +1,112 @@
+.c-afterintro {
+    
+    .c-post {
+        .o-article {
+            figure {
+                
+                figcaption {
+                    @extend %lead;
+                    @extend %rel;
+                    //margin-left: 30px;
+                    padding-left: 50px;
+                    font: {
+                       size: rem(12);
+                       weight: $regular;
+                    }
+                    letter-spacing: 1px;
+                    text: {
+                        align: left;
+                        transform: uppercase;
+                    }
+                    color: $c-black-01;
+
+                    &:before {
+                        @extend %abs-pseudo;
+                        @extend %flex;
+                        @extend %flex-xy;
+                        left: 0; top: -8px;
+                        width: 32px; height: 32px;
+                        background-color: $c-yellow;
+                        border-radius: 50%;
+                        padding-left: 2px;
+                        font: {
+                            size: rem(12);
+                            family: $icomoon;
+                            weight: $semibold;
+                        }
+                        content: "\e90f";
+                    }
+                    
+                    a {
+                        border-bottom: 1px solid $c-black-01;
+                        
+                        &:hover {
+                            .desktop & {
+                                border-color: transparent;
+                            }
+                        }
+                    }
+                    
+                    
+                }
+        
+                img {
+                    margin: {
+                        left: 0;
+                        
+                    }
+                    margin-top: 0;
+                   //@media (min-width: 769px) {
+                        margin-bottom: 30px;            	
+                    //}
+        
+                }
+            }
+        }
+    }
+    
+    .o-article {
+        ol {
+            max-width: 640px;
+            margin: 0 auto;
+        }
+    }
+    
+    .o-cols {
+        padding-top: 72px;
+        
+        @media ( max-width: $base + px ) {
+        	padding-top: base(72);
+        }
+
+        &__item {
+            &:first-of-type {
+                //width: calc(50% - 12px);
+                
+                @media ( max-width: $tablet_portrait + px ) {
+                	margin-bottom: 40px;
+                }
+            }
+
+            &:last-of-type {
+                
+                @media ( min-width: $smartphone + 1px ) {
+                	width: calc(50% + 32px);
+                    padding-left: 32px;
+                }
+            }
+        }
+    }
+    
+    .o-section {
+        padding-bottom: 152px;
+        
+        @media ( max-width: $smartphone_portrait + px ) {
+        	padding-bottom: 80px;
+        }
+        
+        @media ( max-width: $small + px ) {
+        	padding-bottom: 64px;
+        }
+    }
+}

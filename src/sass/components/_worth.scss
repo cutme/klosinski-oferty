@@ -1,0 +1,52 @@
+.c-worth {
+    
+    &__info {
+        flex: 1;
+        
+        @media ( max-width: $smartphone_portrait + px ) {
+            position: relative;
+        	flex: 100%;
+        	margin: 20px auto 0 auto;
+            text-align: center;
+        }
+    }
+    
+    .c-post {
+        max-width: 610px;
+        margin: 0 auto;
+        
+        .o-article {
+            h5 {
+                margin-bottom: 1.5em;
+            }
+            
+            ol {
+                li {
+                    &:not(:last-child) {
+                        margin-bottom: 64px;
+                    }
+                }
+            }
+        }
+    }
+    
+    .o-header {
+        max-width: 740px;
+        
+        .o-lead {
+            &--2 {
+                @media ( max-width: $small + px ) {
+                    font-size: rem(22);
+                }
+            }
+        }
+    }
+    
+    .o-section {
+        padding-bottom: 0;
+        
+        @media ( max-width: $tablet + px ) {
+        	padding-top: 160px;
+        }
+    }
+}

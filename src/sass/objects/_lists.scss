@@ -1,0 +1,107 @@
+.o-list {
+    @extend %list-arrow;
+
+    a {
+        @extend %rel;
+        display: inline;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        border-bottom: 1px solid $c-gray-04;
+        font: {
+            family: $termina;
+            size: rem(14);
+            weight: $regular;
+        }
+        
+        @media ( max-width: $smartphone_portrait + px ) {
+        	font-size: rem(12);
+        }
+        
+        &:hover {
+            .desktop & {
+                border-bottom-color: $c-black-01;
+            }
+        }
+    }
+    
+    &--blackx {
+        li {
+            &:before {
+                top: 1px;
+                background-color: $c-black-01;
+                padding-right: 2px;
+                color: white;
+                content: "\e91c";
+            }
+        }
+    }
+    
+    &--grayarrows {
+        li {
+            &:before {
+                top: -2px;
+                background-color: $c-gray-01;
+            }
+        }
+    }
+    
+    &--graychecks {
+        li {
+            &:before {
+                background-color: $c-gray-01;
+            }
+        }
+    }
+    
+    &--yellowarrows {
+        li {
+            &:before {
+                background-color: $c-primary;
+            }
+        }
+    }
+    
+    &--graychecks,
+    &--yellowchecks {
+        li {
+            &:before {
+                top: 0;
+                padding-right: 1px;
+                font-size: rem(10);
+                content: "\e91d";
+            }
+        }
+    }
+    
+    &--yellowchecks {
+        li {
+            &:before {
+                background-color: $c-primary;
+            }
+        }
+    }    
+    
+    // size 
+
+    &--medium {    
+        li {
+            padding-left: 55px;
+
+            &:before {
+                width: 30px; height: 30px;
+                font-size: rem(8);
+            }
+        }
+    }
+    
+    &--small {    
+        li {
+            padding-left: 60px;
+
+            &:before {
+                width: 24px; height: 24px;
+                font-size: rem(6);
+            }
+        }
+    }
+}
