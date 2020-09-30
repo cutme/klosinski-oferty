@@ -20,12 +20,14 @@
         }
         
         dd, dt {
-            @media ( min-width: $smartphone + 1px ) {
+            @media ( min-width: $smartphone_portrait + 1px ) {
             	width: 50%;
             }               
         }
 
         dt {
+            padding-right: 20px;
+
             [class^="icon-"] {
                 @extend %flex;
                 @extend %flex-xy;
@@ -33,6 +35,7 @@
                 background-color: $c-yellow;
                 border-radius: 50%;
                 margin-right: 30px;
+                flex-shrink: 0;
                 font-size: rem(13);
                 
                 @media ( max-width: $small + px ) {
@@ -40,11 +43,9 @@
                 }
             }
             
-            @media ( max-width: $smartphone + px ) {
+            @media ( max-width: $smartphone_portrait + px ) {
             	display: flex;
                 flex-wrap: wrap;
-                justify-content: center;
-                text-align: center;
                 margin-bottom: 40px;
             }
             
@@ -172,6 +173,21 @@
             family: $termina;
             size: rem(19);
             weight: $heavy;
+        }
+        
+        @media ( max-width: $tablet + px ) {
+        	width: tablet(202);
+        	height: tablet(202);
+        }
+        
+        @media ( max-width: $tablet_portrait + px ) {
+        	width: 150px; height: 150px;
+        	font-size: rem(16);
+        }
+        
+        @media ( max-width: $smartphone_portrait + px ) {
+        	width: 102px; height: 102px;
+        	font-size: rem(12);
         }
     }
     

@@ -239,7 +239,7 @@
 
     li {
         @extend %rel;
-        margin-bottom: 22px;
+        margin-bottom: 28px;
         padding-left: 80px;
         
         @media ( max-width: $smartphone_portrait + px ) {

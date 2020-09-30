@@ -59,8 +59,7 @@ document.addEventListener('DOMContentLoaded',function() {
             cover.remove();
         }, 500);
         
-
-
+       
         // Anims on inview
         window.animsInit()   
 
